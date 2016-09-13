@@ -1,2 +1,6 @@
-# Simple Angular JS Calculator
-Simple AngularJS Calculator i made for practicing purposes
+# Simple AngularJS Calculator
+Simple AngularJS Calculator i made for practicing purposes.
+
+#Pictures
+
+Image coming soon....
