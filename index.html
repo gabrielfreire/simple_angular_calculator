@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="CalculatorApp">
+<div class="container" ng-controller="CalculatorController as vm">
+	<div class="row">
+		
+		
+	</div>
+	<div class="row calculator-background">
+
+		
+		<div class="col-xs-12">
+			<h1 class="heading">{{title}}</h1>
+			<div class="input-display">	
+				<input type="text" value="{{vm.output}}" class="form-control">
+			</div>
+
+			
+			<!-- numbers -->
+			<div class="numbers">
+				<div class="numRow" ng-repeat="n in vm.numbers">
+					<button class="btn btn-lg btn-danger" ng-click="vm.inputNumber(n)"><p>{{n}}</p></button>
+				</div>
+				<!-- clear -->
+				<div class="numRow">
+					<button class="btn btn-lg btn-info" ng-click="vm.clear()"><p>C</p></button>
+				</div>
+				<!-- equals -->
+				<div class="numRow">
+					<button class="btn btn-lg btn-success" ng-click="vm.equals()"><p>=</p></button>
+				</div>
+			</div>
+			
+
+		
+			<div class="operators">
+				<!-- operators -->
+				<div class="opRow" ng-repeat="o in vm.operators">
+					<button class="btn btn-lg btn-warning" ng-click="vm.operate(o)"><p>{{o}}</p></button>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+				
+		<div class="row">
+			<div class="col-xs-12">
+			<p class="footer">Made by <a href="http://www.gabrielfreire.com.br" target="_blank">gabrielfreire.com.br</a></p>
+			</div>
+		</div>	
+		
+	</div>
+</div>
+
+
+<script src="js/angular.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="app.module.js"></script>
+<script type="text/javascript" src="app.controller.js"></script>
+</body>
+</html>
