@@ -9,20 +9,15 @@
 </head>
 <body ng-app="CalculatorApp">
 <div class="container" ng-controller="CalculatorController as vm">
-	<div class="row">
-		
-		
-	</div>
-	<div class="row calculator-background">
 
-		
+	<div class="row calculator-background">
+	
 		<div class="col-xs-12">
-			<h1 class="heading">{{title}}</h1>
+			<h1 class="heading">Calculator</h1>
 			<div class="input-display">	
 				<input type="text" value="{{vm.output}}" class="form-control">
 			</div>
 
-			
 			<!-- numbers -->
 			<div class="numbers">
 				<div class="numRow" ng-repeat="n in vm.numbers">
@@ -37,17 +32,13 @@
 					<button class="btn btn-lg btn-success" ng-click="vm.equals()"><p>=</p></button>
 				</div>
 			</div>
-			
 
-		
 			<div class="operators">
 				<!-- operators -->
 				<div class="opRow" ng-repeat="o in vm.operators">
 					<button class="btn btn-lg btn-warning" ng-click="vm.operate(o)"><p>{{o}}</p></button>
 				</div>
 			</div>
-			
-			
 		</div>
 		
 				
